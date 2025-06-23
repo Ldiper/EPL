@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下载代码 - 请填写信息</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2ea44f;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-container {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background: #2ea44f;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #22863a;
+        }
+        .required-field::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>EPL 代码下载申请表</h1>
+    <div class="form-container">
+        <form action="https://formsubmit.co/yywerica@dlmu.edu.cn" method="POST">
+            <!-- 个人信息部分 -->
+            <div class="form-group">
+                <label for="name" class="required-field">姓名</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required-field">邮箱</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <!-- 新增：工作单位字段 -->
+            <div class="form-group">
+                <label for="organization" class="required-field">工作单位/学校</label>
+                <input type="text" id="organization" name="organization" required>
+            </div>
+            
+            <!-- 用途说明 -->
+            <div class="form-group">
+                <label for="purpose" class="required-field">用途说明</label>
+                <textarea id="purpose" name="purpose" required></textarea>
+            </div>
+            
+            <!-- 表单配置 -->
+            <input type="hidden" name="_subject" value="EPL代码下载申请 - 来自: {{organization}}">
+            <input type="hidden" name="_next" value="https://ldiper.github.io/EPL/download.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="感谢您申请下载EPL代码。我们已收到您的申请信息，下载链接已为您准备好：[https://ldiper.github.io/EPL/download.html]">
+            
+            <button type="submit">提交申请</button>
+        </form>
+    </div>
+</body>
+</html>
